@@ -38,7 +38,8 @@ you can use inlineBase64 plugin without options.
 ```javascript
 var nodemailer = require('nodemailer');
 var inlineBase64 = require('nodemailer-plugin-inline-base64');
-transporter.use('compile', inlineBase64({cidPrefix: 'somePrefix_'}));
+var pluginOptions = {cidPrefix: 'somePrefix_'};
+transporter.use('compile', inlineBase64(pluginOptions));
 transporter.sendMail({
     from: 'me@example.com',
     to: 'hello@mixmax.com',
